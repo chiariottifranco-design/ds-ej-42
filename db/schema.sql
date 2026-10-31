@@ -1,0 +1,20 @@
+-- Script de creación de Base de Datos y Tabla Personas
+-- Base de Datos
+CREATE DATABASE IF NOT EXISTS ds42;
+USE ds42;
+
+-- Tabla Personas
+CREATE TABLE IF NOT EXISTS recitales (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Lugar VARCHAR(100) NOT NULL,
+    Fecha VARCHAR(100) NOT NULL,
+    Hora VARCHAR(100) NOT NULL,
+    Capacidad VARCHAR(100) NOT NULL,
+    PrecioEntrada VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
